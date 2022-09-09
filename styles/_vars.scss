@@ -1,0 +1,41 @@
+$mobile-low: 479px;
+$mobile-width: 767px;
+$tablet-width: 1024px;
+$desktop-width: 1366px;
+
+@mixin b($breakpoints) {
+    @if ($breakpoints ==desktop) {
+        @media (max-width: #{$desktop-width}) {
+            @content
+        }
+    }
+
+    @if ($breakpoints ==tablet) {
+        @media (max-width: #{$tablet-width}) {
+            @content
+        }
+    }
+
+    @else if ($breakpoints ==mobile) {
+        @media (max-width: #{$mobile-width}) {
+            @content
+        }
+    }
+
+    @else if ($breakpoints ==mobile-sm) {
+        @media (max-width: #{$mobile-low}) {
+            @content
+        }
+    }
+
+    @else {
+        @media (max-width: ($breakpoints + px)) {
+            @content
+        }
+    }
+}
+
+@mixin pseudo ($content: '') {
+    position: absolute;
+    content: $content;
+}

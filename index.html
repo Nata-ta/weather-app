@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/ed16fee5e9.js" crossorigin="anonymous"></script>
+    <title>Weather Application</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div id="current-weather-details" class="current">
+            <div id="required-weather-ditails" class="current__ditails">
+                <input type="text" id="required-city" placeholder="Enter city name">
+                <button type="button" id="getRequiredWeather">Search</button>
+            </div>
+            <p>Or</p>
+            <button type="button" id="getCurrentWeather" class="current__btn">Get current weather</button>
+        </div>
+        <div id="weather-info" class="info">
+            <ul class="info__body">
+                <li id="current-temperature" class="info__body-item"></li>
+                <li id="current-city" class="info__body-item"></li>
+                <li id="current-weather-summary" class="info__body-item"></li>
+                <li class="info__body-item">
+                    <ul class="info__wrap">
+                        <li id="current-humidity" class="info__wrap-col"></li>
+                        <li id="current-pressure" class="info__wrap-col"></li>
+                        <li id="current-wind-speed" class="info__wrap-col"></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="error-info" class="error">
+            <div class="error__content">
+              <span id="error-close" class="error__btn">&times;</span>
+              <p>Oops! Wrong city name. Try again</p>
+              <div class="error__box">
+                    <div class="error__face2">
+                        <div class="error__eye"></div>
+                        <div class="error__eye error__right"></div>
+                        <div class="error__mouth error__sad"></div>
+                    </div>
+                    <div class="error__shadow error__move"></div>
+              </div>
+            </div>
+        </div>
+        <div id="loading" class="loading__circ">
+            <div class="loading__text">Loading . . . </div>
+            <div class="loading__hands"></div>
+            <div class="loading__body"></div>
+            <div class="loading__head">
+              <div class="loading__eye"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
