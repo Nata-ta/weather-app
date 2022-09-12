@@ -229,6 +229,12 @@ button:hover {
   text-align: center;
   position: relative;
 }
+@media (max-width: 479px) {
+  .error__content {
+    padding: 30px;
+    height: 30%;
+  }
+}
 .error__btn {
   position: absolute;
   top: 0;
@@ -261,6 +267,11 @@ button:hover {
   left: 37.5%;
   z-index: 2;
   animation: roll 3s ease-in-out infinite;
+}
+@media (max-width: 479px) {
+  .error__face2 {
+    top: 37%;
+  }
 }
 .error__eye {
   position: absolute;
@@ -298,6 +309,11 @@ button:hover {
   top: 49%;
   border-radius: 50%;
   z-index: 1;
+}
+@media (max-width: 479px) {
+  .error__shadow {
+    top: 55%;
+  }
 }
 .error__move {
   animation: move 3s ease-in-out infinite;

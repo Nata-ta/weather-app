@@ -242,6 +242,11 @@ button {
         height: 17%;
         text-align: center;
         position: relative;
+
+        @include b(mobile-sm) {
+            padding: 30px;
+            height: 30%;
+        }
     }
 
     &__btn {
@@ -279,6 +284,10 @@ button {
         left: 37.5%;
         z-index: 2;
         animation: roll 3s ease-in-out infinite;
+
+        @include b(mobile-sm) {
+            top: 37%;
+        }
     }
 
     &__eye {
@@ -321,6 +330,10 @@ button {
         top: 49%;
         border-radius: 50%;
         z-index: 1;
+
+        @include b(mobile-sm) {
+            top: 55%;
+        }
     }
 
     &__move {
