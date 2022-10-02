@@ -117,7 +117,7 @@ button {
 
         & input {
             padding: 10px 15px;
-            max-width: 100%;
+            width: 100%;
             background-color: #ffffffde;
             border-radius: 20px;
             border: 1px solid transparent;
@@ -139,6 +139,18 @@ button {
             &::placeholder {
                 color: #836e6e7d;
             }
+        }
+
+        &-search {
+            position: relative;
+            width: 100%;
+            margin-right: 20px;
+        }
+
+        &-mic {
+            position: absolute;
+            top: 9px;
+            right: 18px;
         }
     }
 

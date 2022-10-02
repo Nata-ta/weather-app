@@ -6,6 +6,7 @@ const pressure = getElement('current-pressure');
 const temperature = getElement('current-temperature');
 const windSpeed = getElement('current-wind-speed');
 const summary = getElement('current-weather-summary');
+const microphone = getElement('microphone');
 
 const getWeatherButton = getElement('getCurrentWeather');
 
@@ -114,6 +115,23 @@ const getLocation = () => {
         })
 };
 
+const enterCityName = () => {
+    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const recognition = new SpeechRecognition();
+
+    recognition.interimResults = true;
+
+    recognition.addEventListener('result', (event) => {
+        requiredCity.value = Array.from(event.results)
+            .map(result => result[0])
+            .map(result => result.transcript)
+            .join('');
+    })
+
+    recognition.start();
+}
+
 closeError.addEventListener('click', function () {
     error.style.display = "none";
 })
@@ -121,3 +139,5 @@ closeError.addEventListener('click', function () {
 getWeatherButton.addEventListener('click', getCurrentLocation);
 
 getRequiredWeather.addEventListener('click', getLocation);
+
+microphone.addEventListener('click', enterCityName);

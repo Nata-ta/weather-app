@@ -14,7 +14,10 @@
         <h1>Weather App</h1>
         <div id="current-weather-details" class="current">
             <div id="required-weather-ditails" class="current__ditails">
-                <input type="text" id="required-city" placeholder="Enter city name">
+                <div class="current__ditails-search">
+                    <input type="text" id="required-city" placeholder="Enter city name">
+                    <label for="required-city" class="current__ditails-mic" id="microphone"><i class="fa fa-solid fa-microphone"></i></label>
+                </div>
                 <button type="button" id="getRequiredWeather">Search</button>
             </div>
             <p>Or</p>
